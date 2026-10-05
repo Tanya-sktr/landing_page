@@ -1,0 +1,29 @@
+.recommended {
+  &__products {
+    @include page-grid;
+
+    row-gap: 40px;
+  }
+
+  &__product {
+    grid-column: 1 / -1;
+    overflow: hidden;
+
+    @include on-tablet {
+      grid-column: 2 / -2;
+    }
+
+    @include on-desktop {
+      grid-column: span 4;
+    }
+  }
+}
+
+.product__photo {
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.product__photo:hover {
+  transform: scale(1.05);
+}

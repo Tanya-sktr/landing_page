@@ -1,0 +1,30 @@
+.body {
+  overflow-x: hidden;
+}
+
+.main {
+  &__content {
+    display: grid;
+    row-gap: 92px;
+    padding-block: 92px;
+
+    @include on-tablet {
+      padding-block: 120px;
+      row-gap: 120px;
+    }
+  }
+}
+
+.container {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding-inline: 20px;
+
+  @include on-tablet {
+    padding-inline: 72px;
+  }
+
+  @include on-desktop {
+    padding-inline: 120px;
+  }
+}

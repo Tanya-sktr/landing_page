@@ -1,0 +1,39 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.page {
+  font-size: 16px;
+  font-family: Poppins, sans-serif;
+  color: $main-text-color;
+  line-height: 140%;
+
+  background-color: rgba(29, 29, 29, 1);
+
+  &__body {
+    min-width: 320px;
+    margin: 0;
+  }
+
+  &__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    transition: all 0.3s;
+    transform: translateX(-100%);
+    opacity: 0;
+    pointer-events: none;
+
+    &:target {
+      opacity: 1;
+      transform: translateX(0);
+      pointer-events: all;
+    }
+  }
+}
+
+.page:has(.page__menu:target) {
+  overflow: hidden; /* not to scroll the page */
+}
