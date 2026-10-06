@@ -4,7 +4,7 @@
   "description": "Frontend boilerplate based on gulp",
   "scripts": {
     "init": "mate-scripts init",
-    "start": "mate-scripts start",
+    "start": "parcel src/index.html",
     "lint": "mate-scripts lint",
     "test:only": "mate-scripts test",
     "build": "mate-scripts build",
@@ -38,6 +38,11 @@
     "projectType": "layout",
     "linters": {
       "bem": false
+    }
+  },
+  "targets": {
+    "default": {
+      "publicUrl": "/landing_page/"
     }
   }
 }
