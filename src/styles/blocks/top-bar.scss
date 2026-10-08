@@ -52,3 +52,36 @@
     }
   }
 }
+
+.phone {
+  display: flex;
+  align-items: center;
+
+  color: #fff;
+  text-decoration: none;
+
+  &__number {
+    display: none;
+  }
+
+  @include on-tablet {
+    gap: 12px;
+
+    &__number {
+      display: block;
+
+      opacity: 0;
+      transform: translateX(10px);
+      pointer-events: none;
+
+      transition:
+        opacity 300ms ease,
+        transform 300ms ease;
+    }
+
+    &:hover &__number {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
